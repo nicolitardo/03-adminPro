@@ -6,12 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { DonaComponent } from './dona/dona.component';
 
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
-  declarations: [IncrementadorComponent, DonaComponent],
+  declarations: [
+    IncrementadorComponent,
+    DonaComponent,
+    AccountSettingsComponent
+  ],
   exports: [
     IncrementadorComponent,
-    DonaComponent
+    DonaComponent,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
