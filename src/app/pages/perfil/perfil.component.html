@@ -5,7 +5,7 @@
                 <h4 class="card-title">Mi perfil de usuario</h4>
                 <h6 class="card-subtitle">Ajustes</h6>
 
-                <form class="form p-t-20" [formGroup]="perfilForm" (ngSubmit)="actualizarPerfil()">
+                <form class="form p-t-20" [formGroup]="perfilForm" (submit)="actualizarPerfil()">
 
                     <div class="form-group">
                         <label for="exampleInputuname">User Name</label>
@@ -18,7 +18,7 @@
                         <label for="exampleInputEmail1">Email address</label>
                         <div class="input-group">
                             <div class="input-group-addon"><i class="ti-email"></i></div>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" formControlName="email" [readOnly]="usuario.google">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" formControlName="email" [readOnly]="usuario.google">
                         </div>
                     </div>
 
@@ -41,8 +41,8 @@
                 <h6 class="card-subtitle">Imagen del usuario</h6>
 
                 <div class="text-center">
-                    <img *ngIf="!imgTemp" [src]="usuario.imagenUrl" class="img-avatar" alt="">
-                    <img *ngIf="imgTemp" [src]="imgTemp" class="img-avatar" alt="">
+                    <img *ngIf="!imgTemp" [src]="usuario.imagenUrl" class="img-avatar">
+                    <img *ngIf="imgTemp" [src]="imgTemp" class="img-avatar">
                 </div>
 
                 <input type="file" (change)="cambiarImagen($event.target.files[0])">

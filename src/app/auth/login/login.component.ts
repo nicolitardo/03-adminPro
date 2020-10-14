@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
     this.usuarioService.login( this.loginForm.value )
           .subscribe( resp => {
-            if ( this.loginForm.get('remember').value === true) {
+            if ( this.loginForm.get('remember').value ) {
               localStorage.setItem('email', this.loginForm.get('email').value);
             } else {
               localStorage.removeItem('email');
@@ -49,15 +49,15 @@ export class LoginComponent implements OnInit {
     // console.log(this.loginForm.value);
   }
 
-  onSuccess(googleUser) {
-    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    const id_token = googleUser.getAuthResponse().id_token;
-    console.log(id_token);
-  }
+  // onSuccess(googleUser) {
+  //   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  //   const id_token = googleUser.getAuthResponse().id_token;
+  //   console.log(id_token);
+  // }
 
-  onFailure(error) {
-    console.log(error);
-  }
+  // onFailure(error) {
+  //   console.log(error);
+  // }
 
   renderButton() {
     gapi.signin2.render('my-signin2', {

@@ -7,17 +7,20 @@ import { DonaComponent } from './dona/dona.component';
 
 import { ChartsModule } from 'ng2-charts';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { ModalImagenComponent } from './modal-imagen/modal-imagen.component';
 
 @NgModule({
   declarations: [
     IncrementadorComponent,
     DonaComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ModalImagenComponent
   ],
   exports: [
     IncrementadorComponent,
     DonaComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ModalImagenComponent
   ],
   imports: [
     CommonModule,
